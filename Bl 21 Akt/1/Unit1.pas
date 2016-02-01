@@ -39,7 +39,7 @@ implementation
 {$R *.dfm}
 
 procedure TfrmSimCal.bmbResetClick(Sender: TObject);
-begin
+begin //reset alles
 edtAfvoer.clear;
 sedEersteG.Clear;
 sedTweedeG.Clear;
@@ -47,7 +47,7 @@ sedEersteG.SetFocus;
 end;
 
 procedure TfrmSimCal.btnDeelClick(Sender: TObject);
-begin
+begin //deel
 iEersteG := sedEersteG.Value;
 iTweedeG := sedTweedeG.Value;
 eAfvoer := iEersteG / iTweedeG;
@@ -55,7 +55,7 @@ edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
 end;
 
 procedure TfrmSimCal.btnMaalClick(Sender: TObject);
-begin
+begin //maal
 iEersteG := sedEersteG.Value;
 iTweedeG := sedTweedeG.Value;
 eAfvoer := iEersteG * iTweedeG;
@@ -63,7 +63,7 @@ edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
 end;
 
 procedure TfrmSimCal.btnMinusClick(Sender: TObject);
-begin
+begin //minus
 iEersteG := sedEersteG.Value;
 iTweedeG := sedTweedeG.Value;
 eAfvoer := iEersteG - iTweedeG;
@@ -71,7 +71,7 @@ edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
 end;
 
 procedure TfrmSimCal.btnPlusClick(Sender: TObject);
-begin
+begin //plus
 iEersteG := sedEersteG.Value;
 iTweedeG := sedTweedeG.Value;
 eAfvoer := iEersteG + iTweedeG;
@@ -80,7 +80,7 @@ end;
 
 procedure TfrmSimCal.FormActivate(Sender: TObject);
 begin
-sedEersteG.SetFocus;
+sedEersteG.SetFocus; //stel foKus
 end;
 
 end.
