@@ -4,13 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Spin;
+  Dialogs, StdCtrls, Spin, Math, Vcl.Buttons;
 
 type
-  TForm1 = class(TForm)
-    SpinEdit1: TSpinEdit;
-    SpinEdit2: TSpinEdit;
-    SpinEdit3: TSpinEdit;
+  TfrmSimCal = class(TForm)
+    sedEersteG: TSpinEdit;
+    edtAfvoer: TEdit;
+    btnPlus: TButton;
+    btnMinus: TButton;
+    btnMaal: TButton;
+    btnDeel: TButton;
+    bmbReset: TBitBtn;
+    bmbClose: TBitBtn;
+    sedTweedeG: TSpinEdit;
+    procedure btnPlusClick(Sender: TObject);
+    procedure btnMinusClick(Sender: TObject);
+    procedure btnMaalClick(Sender: TObject);
+    procedure btnDeelClick(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -18,10 +30,57 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmSimCal: TfrmSimCal;
+  iEersteG, iTweedeG : integer;
+  eAfvoer : extended;
 
 implementation
 
 {$R *.dfm}
+
+procedure TfrmSimCal.bmbResetClick(Sender: TObject);
+begin
+edtAfvoer.clear;
+sedEersteG.Clear;
+sedTweedeG.Clear;
+sedEersteG.SetFocus;
+end;
+
+procedure TfrmSimCal.btnDeelClick(Sender: TObject);
+begin
+iEersteG := sedEersteG.Value;
+iTweedeG := sedTweedeG.Value;
+eAfvoer := iEersteG / iTweedeG;
+edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
+end;
+
+procedure TfrmSimCal.btnMaalClick(Sender: TObject);
+begin
+iEersteG := sedEersteG.Value;
+iTweedeG := sedTweedeG.Value;
+eAfvoer := iEersteG * iTweedeG;
+edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
+end;
+
+procedure TfrmSimCal.btnMinusClick(Sender: TObject);
+begin
+iEersteG := sedEersteG.Value;
+iTweedeG := sedTweedeG.Value;
+eAfvoer := iEersteG - iTweedeG;
+edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
+end;
+
+procedure TfrmSimCal.btnPlusClick(Sender: TObject);
+begin
+iEersteG := sedEersteG.Value;
+iTweedeG := sedTweedeG.Value;
+eAfvoer := iEersteG + iTweedeG;
+edtAfvoer.Text := FloatToStrf(eAfvoer,ffFixed,5,2)
+end;
+
+procedure TfrmSimCal.FormActivate(Sender: TObject);
+begin
+sedEersteG.SetFocus;
+end;
 
 end.
