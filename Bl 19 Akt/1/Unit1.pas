@@ -4,29 +4,27 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons;
+  Dialogs, StdCtrls, Math, Buttons, ExtCtrls, ComCtrls;
 
 type
   TfrmInfo = class(TForm)
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    richedit1: TRichEdit;
-    procedure BitBtn1Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
+    edtNaam: TEdit;
+    edtVan: TEdit;
+    edtFoon: TEdit;
+    edtSel: TEdit;
+    edtEPos: TEdit;
+    redAfvoer: TRichEdit;
+    btnAdd: TButton;
+    bmbReset: TBitBtn;
+    bmbClose: TBitBtn;
+    lblNaam: TLabel;
+    lblVan: TLabel;
+    lblFoon: TLabel;
+    lblSel: TLabel;
+    lblEPos: TLabel;
+    procedure btnAddClick(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,36 +38,39 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmInfo.BitBtn1Click(Sender: TObject);
-var
-sNaam, sVan, sTelefoon, sSel, sEPos : string;
+procedure TfrmInfo.bmbResetClick(Sender: TObject);
 begin
-// stel ales gelyk in varibles
-sNaam := label1.Caption + ' ' + edit1.Text ;
-sVan := label1.Caption + ' ' + edit1.Text ;
-sTelefoon := label1.Caption + ' ' + edit1.Text ;
-sSel := label1.Caption + ' ' + edit1.Text ;
-sEPos := label1.Caption + ' ' + edit1.Text ;
-
-// vertoon alles
-richedit1.lines.add (' ');
-richedit1.lines.add (label1.Caption + ' ' + edit1.Text);
-richedit1.lines.add (label2.Caption + ' ' + edit2.Text);
-richedit1.lines.add (label3.Caption + ' ' + edit3.Text);
-richedit1.lines.add (label4.Caption + ' ' + edit4.Text);
-richedit1.lines.add (label5.Caption + ' ' + edit5.Text);
-
+edtNaam.clear;
+edtVan.clear;
+edtFoon.clear;
+edtSel.clear;
+edtEPos.clear;
+edtNaam.SetFocus;
 end;
 
-procedure TfrmInfo.BitBtn2Click(Sender: TObject);
+procedure TfrmInfo.btnAddClick(Sender: TObject);
+var
+sNaam, sVan, sFoon, sSel, sEPos : string;
 begin
-// Maak ales skoon om nog n stel informasie by te lass
-edit1.Clear;
-edit2.Clear;
-edit3.Clear;
-edit4.Clear;
-edit5.Clear;
-edit1.SetFocus;
+// stel ales gelyk in varibles
+sNaam := lblNaam.Caption + ' ' + edtNaam.Text;
+sVan := lblVan.Caption + ' ' + edtVan.Text;
+sFoon := lblFoon.Caption + ' ' + edtFoon.Text;
+sSel := lblSel.caption + ' ' + edtSel.Text;
+sEPos := lblEPos.Caption + ' ' + edtEPos.Text;
+
+// vertoon alles
+redAfvoer.Lines.Add(' ');
+redAfvoer.Lines.Add(sNaam);
+redAfvoer.Lines.Add(sVan);
+redAfvoer.Lines.Add(sFoon);
+redAfvoer.Lines.Add(sSel);
+redAfvoer.Lines.Add(sEPos);
+end;
+
+procedure TfrmInfo.FormActivate(Sender: TObject);
+begin
+edtNaam.SetFocus;
 end;
 
 end.
