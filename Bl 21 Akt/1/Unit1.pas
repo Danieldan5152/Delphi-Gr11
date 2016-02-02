@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Spin, Math, Vcl.Buttons;
+  Dialogs, StdCtrls, Spin, Math, Buttons;
 
 type
   TfrmSimCal = class(TForm)

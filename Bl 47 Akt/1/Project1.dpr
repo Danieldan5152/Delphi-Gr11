@@ -1,10 +1,8 @@
 program Project1;
 
 uses
-  Vcl.Forms,
-  Unit1 in 'Unit1.pas' {frmRegistreer},
-  Vcl.Themes,
-  Vcl.Styles;
+  Forms,
+  Unit1 in 'Unit1.pas' {frmRegistreer};
 
 {$R *.res}
 
