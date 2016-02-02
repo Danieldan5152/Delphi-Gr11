@@ -1,9 +1,9 @@
 object frmInfo: TfrmInfo
   Left = 0
   Top = 0
-  Caption = 'frmInfo'
-  ClientHeight = 315
-  ClientWidth = 521
+  Caption = 'Info'
+  ClientHeight = 292
+  ClientWidth = 435
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,109 +16,102 @@ object frmInfo: TfrmInfo
   TextHeight = 13
   object lblNaam: TLabel
     Left = 32
-    Top = 51
-    Width = 37
+    Top = 27
+    Width = 27
     Height = 13
-    Caption = 'lblNaam'
+    Caption = 'Naam'
   end
   object lblVan: TLabel
     Left = 32
-    Top = 91
-    Width = 28
+    Top = 67
+    Width = 18
     Height = 13
-    Caption = 'lblVan'
+    Caption = 'Van'
   end
   object lblFoon: TLabel
-    Left = 312
-    Top = 51
-    Width = 34
-    Height = 13
-    Caption = 'lblFoon'
-  end
-  object lblSel: TLabel
-    Left = 312
-    Top = 91
+    Left = 240
+    Top = 27
     Width = 24
     Height = 13
-    Caption = 'lblSel'
+    Caption = 'Foon'
+  end
+  object lblSel: TLabel
+    Left = 240
+    Top = 67
+    Width = 14
+    Height = 13
+    Caption = 'Sel'
   end
   object lblEPos: TLabel
-    Left = 312
-    Top = 131
-    Width = 33
+    Left = 240
+    Top = 107
+    Width = 23
     Height = 13
-    Caption = 'lblEPos'
+    Caption = 'EPos'
   end
   object edtNaam: TEdit
     Left = 80
-    Top = 48
+    Top = 24
     Width = 121
     Height = 21
     TabOrder = 0
-    Text = 'edtNaam'
   end
   object edtVan: TEdit
     Left = 80
-    Top = 88
+    Top = 64
     Width = 121
     Height = 21
     TabOrder = 1
-    Text = 'edtVan'
   end
   object edtFoon: TEdit
-    Left = 360
-    Top = 48
+    Left = 288
+    Top = 24
     Width = 121
     Height = 21
     TabOrder = 2
-    Text = 'edtFoon'
   end
   object edtSel: TEdit
-    Left = 360
-    Top = 88
+    Left = 288
+    Top = 64
     Width = 121
     Height = 21
     TabOrder = 3
-    Text = 'edtSel'
   end
   object edtEPos: TEdit
-    Left = 360
-    Top = 128
+    Left = 288
+    Top = 104
     Width = 121
     Height = 21
     TabOrder = 4
-    Text = 'edtEPos'
   end
   object redAfvoer: TRichEdit
-    Left = 80
-    Top = 152
+    Left = 32
+    Top = 104
     Width = 185
-    Height = 89
+    Height = 161
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
     HideScrollBars = False
-    Lines.Strings = (
-      'redAfvoer')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 5
     Zoom = 100
   end
   object btnAdd: TButton
-    Left = 360
-    Top = 168
+    Left = 288
+    Top = 144
     Width = 75
     Height = 25
-    Caption = 'btnAdd'
+    Caption = '&Add'
     TabOrder = 6
     OnClick = btnAddClick
   end
   object bmbReset: TBitBtn
-    Left = 360
-    Top = 216
+    Left = 288
+    Top = 192
     Width = 75
     Height = 25
     Kind = bkRetry
@@ -127,8 +120,8 @@ object frmInfo: TfrmInfo
     OnClick = bmbResetClick
   end
   object bmbClose: TBitBtn
-    Left = 360
-    Top = 264
+    Left = 288
+    Top = 240
     Width = 75
     Height = 25
     Kind = bkClose
