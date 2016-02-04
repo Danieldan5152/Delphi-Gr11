@@ -38,10 +38,12 @@ implementation
 
 procedure TfrmITPunte.bmbRetryClick(Sender: TObject);
 begin
+// Maak ales skoon
 edtPunt_1.Clear;
 edtPunt_2.Clear;
 edtPunt_3.Clear;
 lblAfvoer.Caption := ' ';
+//stel fokus
 edtNaam.SetFocus;
 end;
 
@@ -50,19 +52,20 @@ var
 sNaam, sAfvoer:string;
 ePunt_1, ePunt_2, ePunt_3, eGemid : extended;
 begin
+//toeken alle Variables
 sNaam := edtNaam.Text;
 ePunt_1 := StrToFloat(edtPunt_1.text);
 ePunt_2 := StrToFloat(edtPunt_2.Text);
 ePunt_3 := StrToFloat(edtPunt_3.Text);
-eGemid := (ePunt_1 + ePunt_2 + ePunt_3) /3 ;
+eGemid := (ePunt_1 + ePunt_2 + ePunt_3) /3 ;//bewerking
 sAfvoer := sNaam + ' se gemiddeld persentasie is ' +
-  FloatToStrF(eGemid,ffFixed,5,2) + '%';
-lblAfvoer.Caption := sAfvoer;
+  FloatToStrF(eGemid,ffFixed,5,2) + '%';//afvoer
+lblAfvoer.Caption := sAfvoer;//vertoon
 end;
 
 procedure TfrmITPunte.FormActivate(Sender: TObject);
 begin
-edtNaam.SetFocus;
+edtNaam.SetFocus;//stel fokus
 end;
 
 end.

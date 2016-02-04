@@ -26,7 +26,7 @@ implementation
 {$R *.dfm}
 
 procedure TfrmRegistreer.btnHierClick(Sender: TObject);
-begin
+begin// leer InputBox
 sRegister := InputBox('Naam en Van', 'Sit in jou naam en van:', ' ');
 lblAfvoer.Caption := 'Dankie vir ' + sRegister + ' se regestrasie';
 end;

@@ -39,13 +39,13 @@ implementation
 {$R *.dfm}
 
 procedure TfrmInfo.bmbResetClick(Sender: TObject);
-begin
+begin//maak ales skoon
 edtNaam.clear;
 edtVan.clear;
 edtFoon.clear;
 edtSel.clear;
 edtEPos.clear;
-edtNaam.SetFocus;
+edtNaam.SetFocus;//stel fokus
 end;
 
 procedure TfrmInfo.btnAddClick(Sender: TObject);
@@ -70,7 +70,7 @@ end;
 
 procedure TfrmInfo.FormActivate(Sender: TObject);
 begin
-edtNaam.SetFocus;
+edtNaam.SetFocus;//stel fokus
 end;
 
 end.

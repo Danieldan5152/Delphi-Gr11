@@ -35,7 +35,7 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.bmbResetClick(Sender: TObject);
-begin
+begin//herstel alles
 iPiet := 0;
 iSanny := 0;
 iSakkie := 0;
@@ -50,23 +50,27 @@ end;
 
 procedure TForm1.btnVerwerkClick(Sender: TObject);
 begin
+//wie gekies word
 if rgpLeerders.itemindex = 0 then
   iPiet := iPiet + 1;
 if rgpLeerders.itemindex = 1 then
   iSanny := iSanny + 1;
 if rgpLeerders.itemindex = 2 then
   iSakkie := iSakkie + 1;
+ //totale stemme
 sPiet := 'Piet: ' + IntToStr(iPiet);
 sSanny := 'Sanny: ' + IntToStr(iSanny);
 sSakkie := 'Sakkie: ' + IntToStr(iSakkie);
+//afvoer
 lblPiet.Caption := sPiet;
 lblSanny.Caption := sSanny;
 lblSakkie.Caption := sSakkie;
+//automatiese herstel
 rgpLeerders.itemindex := -1;
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);
-begin
+begin//begin waardes
 iPiet := 0;
 iSanny := 0;
 iSakkie := 0;
