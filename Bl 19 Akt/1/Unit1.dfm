@@ -84,29 +84,13 @@ object frmInfo: TfrmInfo
     Height = 21
     TabOrder = 4
   end
-  object redAfvoer: TRichEdit
-    Left = 32
-    Top = 104
-    Width = 185
-    Height = 161
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    HideScrollBars = False
-    ParentFont = False
-    ScrollBars = ssVertical
-    TabOrder = 5
-    Zoom = 100
-  end
   object btnAdd: TButton
     Left = 288
     Top = 144
     Width = 75
     Height = 25
     Caption = '&Add'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = btnAddClick
   end
   object bmbReset: TBitBtn
@@ -114,9 +98,10 @@ object frmInfo: TfrmInfo
     Top = 192
     Width = 75
     Height = 25
+    DoubleBuffered = True
     Kind = bkRetry
-    NumGlyphs = 2
-    TabOrder = 7
+    ParentDoubleBuffered = False
+    TabOrder = 6
     OnClick = bmbResetClick
   end
   object bmbClose: TBitBtn
@@ -124,8 +109,24 @@ object frmInfo: TfrmInfo
     Top = 240
     Width = 75
     Height = 25
+    DoubleBuffered = True
     Kind = bkClose
-    NumGlyphs = 2
+    ParentDoubleBuffered = False
+    TabOrder = 7
+  end
+  object redAfvoer: TRichEdit
+    Left = 32
+    Top = 128
+    Width = 185
+    Height = 137
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssHorizontal
     TabOrder = 8
   end
 end

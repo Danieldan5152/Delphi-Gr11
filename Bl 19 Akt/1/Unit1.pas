@@ -13,7 +13,6 @@ type
     edtFoon: TEdit;
     edtSel: TEdit;
     edtEPos: TEdit;
-    redAfvoer: TRichEdit;
     btnAdd: TButton;
     bmbReset: TBitBtn;
     bmbClose: TBitBtn;
@@ -22,6 +21,7 @@ type
     lblFoon: TLabel;
     lblSel: TLabel;
     lblEPos: TLabel;
+    redAfvoer: TRichEdit;
     procedure btnAddClick(Sender: TObject);
     procedure bmbResetClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
