@@ -3,8 +3,8 @@ unit Unit1;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Math, Buttons, ExtCtrls;
 
 type
   TfrmRegistreer = class(TForm)
@@ -26,7 +26,7 @@ implementation
 {$R *.dfm}
 
 procedure TfrmRegistreer.btnHierClick(Sender: TObject);
-begin
+begin// leer InputBox
 sRegister := InputBox('Naam en Van', 'Sit in jou naam en van:', ' ');
 lblAfvoer.Caption := 'Dankie vir ' + sRegister + ' se regestrasie';
 end;

@@ -1,0 +1,8 @@
+		replace
+		<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>		
+		with
+		<VerInfo_Locale>7177</VerInfo_Locale>
+        <DCC_DependencyCheckOutputName>Project2.exe</DCC_DependencyCheckOutputName>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Platform>x86</DCC_Platform>
