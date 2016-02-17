@@ -25,7 +25,7 @@ type
 
 var
   frmKosteSMS: TfrmKosteSMS;
-
+  i1Char : integer;
 implementation
 
 {$R *.dfm}
@@ -41,10 +41,9 @@ end;
 procedure TfrmKosteSMS.btnBewerkClick(Sender: TObject);
 var
 sSMSString, sAfvoerK : string;
-iSL, iKoste, i1Char : integer;
+iSL, iKoste : integer;
 eKoste : extended;
 begin
- i1Char := 2; //hoeveel een karakter kos
  sSMSString := edtSMSString.Text; //watse string se koster uit tewerk
  iSL := Length(sSMSString);// verwerking van lente van string
  iKoste := iSL * i1Char; // verwerking van koste in sent
@@ -55,8 +54,9 @@ edtAfvoerK.Text := sAfvoerK;  //vertoon
 end;
 
 procedure TfrmKosteSMS.z(Sender: TObject);
-begin  // stel focus
-edtSMSString.SetFocus;
+begin
+ edtSMSString.SetFocus; // stel focus
+ i1Char := 2; //hoeveel een karakter kos
 end;
 
 end.

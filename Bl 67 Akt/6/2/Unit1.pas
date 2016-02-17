@@ -64,7 +64,7 @@ iBUur, iBMin, iEUur, iEMin, iUre, iMin, iTotaleMin, iUreBetaal,
 sBeginT, sEindT, sGVDag, sGemidGVDag, sKosteVK,
 sTydKlient, sKVD : string;
 begin
-iKliente := iKliente + 1;//kliente vir die dag tel
+Inc(iKliente);//kliente vir die dag tel
 
 sBeginT := edtBegin.Text; //Tyd begin
 sEindT := edtEinde.text; // Tyd geeindig

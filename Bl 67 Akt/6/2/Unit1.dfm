@@ -3,7 +3,7 @@ object frmInternetCafe: TfrmInternetCafe
   Top = 0
   Caption = 'Internet Kaffee'
   ClientHeight = 278
-  ClientWidth = 484
+  ClientWidth = 329
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -83,8 +83,9 @@ object frmInternetCafe: TfrmInternetCafe
     Top = 224
     Width = 75
     Height = 25
+    DoubleBuffered = True
     Kind = bkRetry
-    NumGlyphs = 2
+    ParentDoubleBuffered = False
     TabOrder = 1
     OnClick = bmbRetryClick
   end
@@ -93,8 +94,9 @@ object frmInternetCafe: TfrmInternetCafe
     Top = 224
     Width = 75
     Height = 25
+    DoubleBuffered = True
     Kind = bkClose
-    NumGlyphs = 2
+    ParentDoubleBuffered = False
     TabOrder = 2
   end
   object edtBegin: TEdit
