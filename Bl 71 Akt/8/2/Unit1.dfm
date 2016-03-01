@@ -1,9 +1,9 @@
-object frmVoorletter: TfrmVoorletter
+object frmCellNo: TfrmCellNo
   Left = 0
   Top = 0
-  Caption = 'Jou voorletter'
-  ClientHeight = 114
-  ClientWidth = 264
+  Caption = 'Cell No'
+  ClientHeight = 104
+  ClientWidth = 289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,30 +13,23 @@ object frmVoorletter: TfrmVoorletter
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object lblNaamENVan: TLabel
+  object lblToevoer: TLabel
     Left = 8
-    Top = 24
-    Width = 63
+    Top = 8
+    Width = 95
     Height = 13
-    Caption = 'Naam en Van'
+    Caption = 'Sleutel in jou sel NO'
   end
-  object lblVanENVoorlett: TLabel
-    Left = 8
-    Top = 51
-    Width = 104
-    Height = 13
-    Caption = 'Jou Van en Voorletter'
-  end
-  object edtNaamENVan: TEdit
-    Left = 118
-    Top = 21
-    Width = 138
+  object edtToevoer: TEdit
+    Left = 109
+    Top = 8
+    Width = 161
     Height = 21
     TabOrder = 0
   end
   object btnBewerk: TButton
-    Left = 15
-    Top = 81
+    Left = 8
+    Top = 71
     Width = 75
     Height = 25
     Caption = '&Bewerk'
@@ -44,18 +37,19 @@ object frmVoorletter: TfrmVoorletter
     OnClick = btnBewerkClick
   end
   object bmbRetry: TBitBtn
-    Left = 96
-    Top = 81
+    Left = 98
+    Top = 72
     Width = 75
     Height = 25
     DoubleBuffered = True
     Kind = bkRetry
     ParentDoubleBuffered = False
     TabOrder = 2
+    OnClick = bmbRetryClick
   end
   object bmbClose: TBitBtn
-    Left = 177
-    Top = 81
+    Left = 187
+    Top = 72
     Width = 75
     Height = 25
     DoubleBuffered = True
@@ -63,10 +57,10 @@ object frmVoorletter: TfrmVoorletter
     ParentDoubleBuffered = False
     TabOrder = 3
   end
-  object edtVanENVoorlett: TEdit
-    Left = 118
-    Top = 48
-    Width = 138
+  object edtAfvoer: TEdit
+    Left = 109
+    Top = 35
+    Width = 161
     Height = 21
     ReadOnly = True
     TabOrder = 4
