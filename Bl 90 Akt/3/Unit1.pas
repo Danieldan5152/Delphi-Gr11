@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Math, Vcl.StdCtrls, Vcl.Buttons;
+  Dialogs, Math, StdCtrls, Buttons;
 
 type
   TfrmWoordSpeeltjie = class(TForm)
@@ -53,7 +53,7 @@ begin
   if cHuidigeL = cVoorigeL then
     begin
       frmWoordSpeeltjie.edtWoord.Clear;
-      cVoorigeL := sWoord[iLength];
+      cVoorigeL := sWoord[iLength];     //copy laste letter
       frmWoordSpeeltjie.lblVoorigeW.caption := cVoorigeL ;
     end
   else
