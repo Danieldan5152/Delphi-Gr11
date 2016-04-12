@@ -41,10 +41,10 @@ sSMS, sAfvoer : string;
 iLente, iKeer, iDoen : integer;
 eSKoste : extended;
 begin
-  sSMS := frmSMS_K.edtToevoer.Text; //sms se string\
+  sSMS := frmSMS_K.edtToevoer.Text; //sms se string
   iLente := Length(sSMS);//lente van die sms
   iKeer := 0; //letters in die sin
-  for iDoen := 1 to iLente do
+  for iDoen := 1 to iLente do //toets vir spasies
     Begin
       if sSMS[iDoen] <> ' ' then
         iKeer := iKeer + 1;
