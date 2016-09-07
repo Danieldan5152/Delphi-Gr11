@@ -1,0 +1,29 @@
+object frmDisplayTourData: TfrmDisplayTourData
+  Left = 0
+  Top = 0
+  Caption = 'frmDisplayTourData'
+  ClientHeight = 198
+  ClientWidth = 1042
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgLearners: TDBGrid
+    Left = 0
+    Top = 8
+    Width = 1033
+    Height = 177
+    DataSource = dmTourData.dsrLearners
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+end
